@@ -32,7 +32,17 @@ LIMSManagment
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:LIMSManagment.My.Resources.Resources.icons8_maintenance_30">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LIMSManagment.My.Resources.Resources.icons8_maximize_window_filled_50">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LIMSManagment.My.Resources.Resources.icons8_microsoft_excel_30">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

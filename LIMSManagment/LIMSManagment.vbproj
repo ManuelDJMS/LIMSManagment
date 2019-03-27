@@ -148,5 +148,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-biomass-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microsoft-excel-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maintenance-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

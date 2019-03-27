@@ -1,5 +1,6 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class FormPrincipal
+    Dim banm, banb As Boolean
 #Region "FUNCIONALIDADES DEL FORMULARIO"
     'RESIZE DEL FORMULARIO- CAMBIAR TAMAÑO
     Dim cGrip As Integer = 10
@@ -134,8 +135,9 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
-        AbrirFormEnPanel(Of FrmImportar)()
-        btnArticulos.BackColor = Color.FromArgb(12, 61, 92)
+        'AbrirFormEnPanel(Of FrmImportar)()
+        'btnArticulos.BackColor = Color.FromArgb(12, 61, 92)
+        PanelMenuArt.Visible = True
     End Sub
 
     Private Sub CerrarFormulario(ByVal sender As Object, ByVal e As FormClosedEventArgs)

@@ -22,6 +22,7 @@ Partial Class FormPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPrincipal))
         Me.PanelContenedor = New System.Windows.Forms.Panel()
         Me.PanelFormularios = New System.Windows.Forms.Panel()
@@ -29,14 +30,19 @@ Partial Class FormPrincipal
         Me.btnArticulos = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PanelMenuArt = New System.Windows.Forms.Panel()
+        Me.btMantenimiento = New System.Windows.Forms.Button()
+        Me.btnImportarMenu = New System.Windows.Forms.Button()
         Me.PanelBarraTitulo = New System.Windows.Forms.Panel()
         Me.btnRestaurar = New System.Windows.Forms.PictureBox()
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
+        Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
         Me.PanelContenedor.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelMenuArt.SuspendLayout()
         Me.PanelBarraTitulo.SuspendLayout()
         CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +79,7 @@ Partial Class FormPrincipal
         Me.PanelMenu.Controls.Add(Me.btnArticulos)
         Me.PanelMenu.Controls.Add(Me.Label1)
         Me.PanelMenu.Controls.Add(Me.PictureBox1)
+        Me.PanelMenu.Controls.Add(Me.PanelMenuArt)
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenu.Location = New System.Drawing.Point(0, 32)
         Me.PanelMenu.Margin = New System.Windows.Forms.Padding(2)
@@ -84,8 +91,8 @@ Partial Class FormPrincipal
         '
         Me.btnArticulos.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnArticulos.FlatAppearance.BorderSize = 0
-        Me.btnArticulos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.btnArticulos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.btnArticulos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.btnArticulos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnArticulos.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnArticulos.ForeColor = System.Drawing.Color.Gainsboro
@@ -121,6 +128,59 @@ Partial Class FormPrincipal
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'PanelMenuArt
+        '
+        Me.PanelMenuArt.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.PanelMenuArt.Controls.Add(Me.btMantenimiento)
+        Me.PanelMenuArt.Controls.Add(Me.btnImportarMenu)
+        Me.PanelMenuArt.Location = New System.Drawing.Point(32, 192)
+        Me.PanelMenuArt.Name = "PanelMenuArt"
+        Me.PanelMenuArt.Size = New System.Drawing.Size(167, 125)
+        Me.PanelMenuArt.TabIndex = 3
+        Me.PanelMenuArt.Visible = False
+        '
+        'btMantenimiento
+        '
+        Me.btMantenimiento.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btMantenimiento.FlatAppearance.BorderSize = 0
+        Me.btMantenimiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btMantenimiento.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btMantenimiento.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btMantenimiento.Image = Global.LIMSManagment.My.Resources.Resources.icons8_maintenance_30
+        Me.btMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btMantenimiento.Location = New System.Drawing.Point(1, 65)
+        Me.btMantenimiento.Margin = New System.Windows.Forms.Padding(2)
+        Me.btMantenimiento.Name = "btMantenimiento"
+        Me.btMantenimiento.Size = New System.Drawing.Size(167, 55)
+        Me.btMantenimiento.TabIndex = 4
+        Me.btMantenimiento.Text = "Mantenimiento"
+        Me.btMantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btMantenimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btMantenimiento.UseVisualStyleBackColor = True
+        '
+        'btnImportarMenu
+        '
+        Me.btnImportarMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnImportarMenu.FlatAppearance.BorderSize = 0
+        Me.btnImportarMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnImportarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnImportarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImportarMenu.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImportarMenu.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnImportarMenu.Image = Global.LIMSManagment.My.Resources.Resources.icons8_microsoft_excel_30
+        Me.btnImportarMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnImportarMenu.Location = New System.Drawing.Point(2, 2)
+        Me.btnImportarMenu.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnImportarMenu.Name = "btnImportarMenu"
+        Me.btnImportarMenu.Size = New System.Drawing.Size(166, 55)
+        Me.btnImportarMenu.TabIndex = 3
+        Me.btnImportarMenu.Text = "Importar"
+        Me.btnImportarMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnImportarMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnImportarMenu.UseVisualStyleBackColor = True
         '
         'PanelBarraTitulo
         '
@@ -205,6 +265,7 @@ Partial Class FormPrincipal
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelMenu.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelMenuArt.ResumeLayout(False)
         Me.PanelBarraTitulo.ResumeLayout(False)
         CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -225,4 +286,8 @@ Partial Class FormPrincipal
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnArticulos As Button
+    Friend WithEvents PanelMenuArt As Panel
+    Friend WithEvents Tiempo As Timer
+    Friend WithEvents btnImportarMenu As Button
+    Friend WithEvents btMantenimiento As Button
 End Class
