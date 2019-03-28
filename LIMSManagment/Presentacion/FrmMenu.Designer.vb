@@ -27,23 +27,23 @@ Partial Class FormPrincipal
         Me.PanelContenedor = New System.Windows.Forms.Panel()
         Me.PanelFormularios = New System.Windows.Forms.Panel()
         Me.PanelMenu = New System.Windows.Forms.Panel()
-        Me.btnArticulos = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelMenuArt = New System.Windows.Forms.Panel()
+        Me.PanelBarraTitulo = New System.Windows.Forms.Panel()
+        Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
+        Me.btnArticulos = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btMantenimiento = New System.Windows.Forms.Button()
         Me.btnImportarMenu = New System.Windows.Forms.Button()
-        Me.PanelBarraTitulo = New System.Windows.Forms.Panel()
         Me.btnRestaurar = New System.Windows.Forms.PictureBox()
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
-        Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
         Me.PanelContenedor.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenuArt.SuspendLayout()
         Me.PanelBarraTitulo.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,6 +87,42 @@ Partial Class FormPrincipal
         Me.PanelMenu.Size = New System.Drawing.Size(200, 525)
         Me.PanelMenu.TabIndex = 1
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Berlin Sans FB", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(45, 87)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(110, 37)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "METAS"
+        '
+        'PanelMenuArt
+        '
+        Me.PanelMenuArt.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.PanelMenuArt.Controls.Add(Me.btMantenimiento)
+        Me.PanelMenuArt.Controls.Add(Me.btnImportarMenu)
+        Me.PanelMenuArt.Location = New System.Drawing.Point(32, 192)
+        Me.PanelMenuArt.Name = "PanelMenuArt"
+        Me.PanelMenuArt.Size = New System.Drawing.Size(167, 125)
+        Me.PanelMenuArt.TabIndex = 3
+        Me.PanelMenuArt.Visible = False
+        '
+        'PanelBarraTitulo
+        '
+        Me.PanelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.PanelBarraTitulo.Controls.Add(Me.btnRestaurar)
+        Me.PanelBarraTitulo.Controls.Add(Me.btnMinimizar)
+        Me.PanelBarraTitulo.Controls.Add(Me.btnMaximizar)
+        Me.PanelBarraTitulo.Controls.Add(Me.btnCerrar)
+        Me.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelBarraTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.PanelBarraTitulo.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelBarraTitulo.Name = "PanelBarraTitulo"
+        Me.PanelBarraTitulo.Size = New System.Drawing.Size(1021, 32)
+        Me.PanelBarraTitulo.TabIndex = 0
+        '
         'btnArticulos
         '
         Me.btnArticulos.Cursor = System.Windows.Forms.Cursors.Hand
@@ -108,17 +144,6 @@ Partial Class FormPrincipal
         Me.btnArticulos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnArticulos.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Berlin Sans FB", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(45, 87)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 37)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "METAS"
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.LIMSManagment.My.Resources.Resources.metass
@@ -128,17 +153,6 @@ Partial Class FormPrincipal
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'PanelMenuArt
-        '
-        Me.PanelMenuArt.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.PanelMenuArt.Controls.Add(Me.btMantenimiento)
-        Me.PanelMenuArt.Controls.Add(Me.btnImportarMenu)
-        Me.PanelMenuArt.Location = New System.Drawing.Point(32, 192)
-        Me.PanelMenuArt.Name = "PanelMenuArt"
-        Me.PanelMenuArt.Size = New System.Drawing.Size(167, 125)
-        Me.PanelMenuArt.TabIndex = 3
-        Me.PanelMenuArt.Visible = False
         '
         'btMantenimiento
         '
@@ -181,20 +195,6 @@ Partial Class FormPrincipal
         Me.btnImportarMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnImportarMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnImportarMenu.UseVisualStyleBackColor = True
-        '
-        'PanelBarraTitulo
-        '
-        Me.PanelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.PanelBarraTitulo.Controls.Add(Me.btnRestaurar)
-        Me.PanelBarraTitulo.Controls.Add(Me.btnMinimizar)
-        Me.PanelBarraTitulo.Controls.Add(Me.btnMaximizar)
-        Me.PanelBarraTitulo.Controls.Add(Me.btnCerrar)
-        Me.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelBarraTitulo.Location = New System.Drawing.Point(0, 0)
-        Me.PanelBarraTitulo.Margin = New System.Windows.Forms.Padding(2)
-        Me.PanelBarraTitulo.Name = "PanelBarraTitulo"
-        Me.PanelBarraTitulo.Size = New System.Drawing.Size(1021, 32)
-        Me.PanelBarraTitulo.TabIndex = 0
         '
         'btnRestaurar
         '
@@ -264,9 +264,9 @@ Partial Class FormPrincipal
         Me.PanelContenedor.ResumeLayout(False)
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelMenu.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenuArt.ResumeLayout(False)
         Me.PanelBarraTitulo.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
