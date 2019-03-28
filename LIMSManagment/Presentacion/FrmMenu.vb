@@ -140,6 +140,12 @@ Public Class FormPrincipal
         PanelMenuArt.Visible = False
     End Sub
 
+    Private Sub btMantenimiento_Click(sender As Object, e As EventArgs) Handles btMantenimiento.Click
+        AbrirFormEnPanel(Of FrmMantenimiento)()
+        btnArticulos.BackColor = Color.FromArgb(12, 61, 92)
+        PanelMenuArt.Visible = False
+    End Sub
+
     Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
         If (PanelMenuArt.Visible = True) Then
             btnArticulos.Image = My.Resources.icons8_biomass_48
