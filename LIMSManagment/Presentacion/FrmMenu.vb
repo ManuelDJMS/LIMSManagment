@@ -148,10 +148,8 @@ Public Class FormPrincipal
 
     Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
         If (PanelMenuArt.Visible = True) Then
-            btnArticulos.Image = My.Resources.icons8_biomass_48
             PanelMenuArt.Visible = False
         Else
-            btnArticulos.Image = My.Resources.icons8_biomass_48__1_
             PanelMenuArt.Visible = True
         End If
     End Sub
