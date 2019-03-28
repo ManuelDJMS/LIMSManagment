@@ -38,7 +38,7 @@ Module Importar
             End If
 
             If xSheet.ToString <> "" Then
-                MsgBox("dentro IF")
+
                 conn = New OleDbConnection(
                               "Provider=Microsoft.ACE.OLEDB.12.0;" &
                               "data source=" & ExcelFile & "; " &
