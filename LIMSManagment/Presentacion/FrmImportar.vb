@@ -88,6 +88,13 @@ Public Class FrmImportar
                         maximo2 = 0
                         transaction.Rollback()
                         MsgBox("Operación Cancelada", MsgBoxStyle.Critical)
+                        r = "DBCC CHECKIDENT(SetUpEquipment, RESEED, 1)"
+                        comando.CommandText = r
+                        comando.ExecuteNonQuery()
+                        '-----------------------------------------
+                        r = "DBCC CHECKIDENT(SetupEquipmentServiceMapping, RESEED, " & maximo & ")"
+                        comando.CommandText = r
+                        comando.ExecuteNonQuery()
                         conexion.Close()
                         Me.Dispose()
                     End If
