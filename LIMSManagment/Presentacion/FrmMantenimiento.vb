@@ -134,18 +134,36 @@ Public Class FrmMantenimiento
     End Sub
 
     Private Sub RbTodos_CheckedChanged(sender As Object, e As EventArgs) Handles RbTodos.CheckedChanged
-        ''dgArticulos.Columns("sda").Visible = False
+        For i = 1 To dgArticulos.Columns.Count
+            dgArticulos.Columns("Column" & Convert.ToString(i)).Visible = True
+        Next
     End Sub
 
     Private Sub dgDatosG_CheckedChanged(sender As Object, e As EventArgs) Handles dgDatosG.CheckedChanged
-        Dim arreglo() = {1, 2, 3, 4, 5}
+        Dim arreglo() = {2, 3, 4, 5, 6, 22, 26, 39}
         Dim l As Integer
         l = Convert.ToInt32(UBound(arreglo))
         For i = 1 To dgArticulos.Columns.Count
             For j = 0 To l
                 If i = arreglo(j) Then
                     dgArticulos.Columns("Column" & Convert.ToString(i)).Visible = True
-                    j = 5
+                    j = 8
+                Else
+                    dgArticulos.Columns("Column" & Convert.ToString(i)).Visible = False
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Sub RbTecnicos_CheckedChanged(sender As Object, e As EventArgs) Handles RbTecnicos.CheckedChanged
+        Dim arreglo() = {2, 3, 4, 5, 14, 15, 16, 17, 18, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37}
+        Dim l As Integer
+        l = Convert.ToInt32(UBound(arreglo))
+        For i = 1 To dgArticulos.Columns.Count
+            For j = 0 To l
+                If i = arreglo(j) Then
+                    dgArticulos.Columns("Column" & Convert.ToString(i)).Visible = True
+                    j = 21
                 Else
                     dgArticulos.Columns("Column" & Convert.ToString(i)).Visible = False
                 End If
