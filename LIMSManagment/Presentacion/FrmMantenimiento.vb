@@ -6,11 +6,11 @@ Public Class FrmMantenimiento
             comando2019 = conexion2019.CreateCommand
             Dim r As String
         r = "Select [SetUpEquipment].EquipId, EquipmentName, Model, Accuracy, Mfr, Dept, Location, CALinterval, CALCycle,CALDue,ShortNotes,IsActive,OnSite, IEEEPort, CustomerPort,
-            RS232Port,Subcontract,Automated,DtaIncluded,Catagory,Class,ItemNumber,TurnAroundTime,ApproxWeight,RelationItemNo,CalibrationMethod,
-            Standardization,Accreditation,ServiceDescription,Scale1Accuracy,Scale2Accuracy, Scale1Resolution, Scale2Resolution,Scale1Unit,Scale2Unit,Uncertainity,
-            ServicesId,Price,Field1,Field2,Field3,Field4,Field5,Field6,Value1,Value2,Value3,Value4,Value5,Value6
-            from [SetUpEquipment] inner join SetUpEquipmentServiceMapping on [SetUpEquipment].EquipId=SetUpEquipmentServiceMapping.EquipId
-            inner join EquipmentVariable on SetUpEquipment.EquipId=EquipmentVariable.EquipID_FK"
+RS232Port,Subcontract,Automated,DtaIncluded,Catagory,Class,ItemNumber, AdditionalSepcification,TurnAroundTime,ApproxWeight,RelationItemNo,CalibrationMethod,
+Standardization,Accreditation,ServiceDescription,Scale1Accuracy,Scale2Accuracy, Scale1Resolution, Scale2Resolution,Scale1Unit,Scale2Unit,Uncertainity,
+ServicesId,Price,Field1,Field2,Field3,Field4,Field5,Field6,Value1,Value2,Value3,Value4,Value5,Value6
+  from [SetUpEquipment] inner join SetUpEquipmentServiceMapping on [SetUpEquipment].EquipId=SetUpEquipmentServiceMapping.EquipId
+  inner join EquipmentVariable on SetUpEquipment.EquipId=EquipmentVariable.EquipID_FK"
         comando2019.CommandText = r
             lector2019 = comando2019.ExecuteReader
             While lector2019.Read

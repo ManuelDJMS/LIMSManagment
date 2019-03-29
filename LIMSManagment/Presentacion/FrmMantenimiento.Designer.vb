@@ -62,7 +62,7 @@ Partial Class FrmMantenimiento
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -450,7 +450,10 @@ Partial Class FrmMantenimiento
         'Column13
         '
         Me.Column13.HeaderText = "Activo"
+        Me.Column13.Items.AddRange(New Object() {"Y", "N"})
         Me.Column13.Name = "Column13"
+        Me.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'Column14
         '
@@ -574,7 +577,7 @@ Partial Class FrmMantenimiento
         '
         'Column38
         '
-        Me.Column38.HeaderText = "Insertidumbre"
+        Me.Column38.HeaderText = "Incertidumbre"
         Me.Column38.Name = "Column38"
         '
         'Column39
@@ -709,7 +712,7 @@ Partial Class FrmMantenimiento
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents Column13 As DataGridViewTextBoxColumn
+    Friend WithEvents Column13 As DataGridViewComboBoxColumn
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
