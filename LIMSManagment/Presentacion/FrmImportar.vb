@@ -19,8 +19,8 @@ Public Class FrmImportar
                 ModifiedBy,ModifiedOn,ItemNumber,AdditionalSepcification,TurnAroundTime,
                 ApproxWeight,RelationItemNo,CalibrationMethod,Standardization,Accreditation,
                 ServiceDescription,AttachmentName,Attachment,Scale1Accuracy,Scale2Accuracy,
-                Scale1Resolution,Scale2Resolution,Scale1Unit,Scale2Unit,Uncertainity)VALUES ('" & dgArticulos.Item(1, i).Value & "','
-                " & Trim((dgArticulos.Item(2, i).Value).Replace("'", "")) & "','" & (dgArticulos.Item(3, i).Value).Replace("'", "") & "','" & dgArticulos.Item(4, i).Value & "'
+                Scale1Resolution,Scale2Resolution,Scale1Unit,Scale2Unit,Uncertainity)VALUES ('" & dgArticulos.Item(1, i).Value & "',
+                '" & (dgArticulos.Item(2, i).Value).Replace("'", "") & "','" & (dgArticulos.Item(3, i).Value).Replace("'", "") & "','" & dgArticulos.Item(4, i).Value & "'
                 ,'" & (dgArticulos.Item(5, i).Value) & "','" & dgArticulos.Item(6, i).Value & "','" & dgArticulos.Item(7, i).Value & "'
                 ,'" & dgArticulos.Item(8, i).Value & "'," & Val(dgArticulos.Item(9, i).Value) & ",'" & dgArticulos.Item(10, i).Value & "'
                 ,'" & (dgArticulos.Item(11, i).Value) & "','" & (dgArticulos.Item(12, i).Value) & "'
