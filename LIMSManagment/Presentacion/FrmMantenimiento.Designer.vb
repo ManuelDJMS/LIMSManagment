@@ -22,12 +22,30 @@ Partial Class FrmMantenimiento
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnImportar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.dgArticulos = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextModelo = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextMarca = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextNombre = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextNum = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.RbTodos = New System.Windows.Forms.RadioButton()
+        Me.dgDatosG = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,11 +53,12 @@ Partial Class FrmMantenimiento
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -78,22 +97,6 @@ Partial Class FrmMantenimiento
         Me.Column49 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column50 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column51 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column52 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextModelo = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextMarca = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextNumero = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextNombre = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.dgArticulos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -137,295 +140,37 @@ Partial Class FrmMantenimiento
         Me.dgArticulos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.dgArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgArticulos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgArticulos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgArticulos.ColumnHeadersHeight = 30
         Me.dgArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgArticulos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18, Me.Column19, Me.Column20, Me.Column21, Me.Column22, Me.Column23, Me.Column24, Me.Column25, Me.Column26, Me.Column27, Me.Column28, Me.Column29, Me.Column30, Me.Column31, Me.Column32, Me.Column33, Me.Column34, Me.Column35, Me.Column36, Me.Column37, Me.Column38, Me.Column39, Me.Column40, Me.Column41, Me.Column42, Me.Column43, Me.Column44, Me.Column45, Me.Column46, Me.Column47, Me.Column48, Me.Column49, Me.Column50, Me.Column51, Me.Column52})
+        Me.dgArticulos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18, Me.Column19, Me.Column20, Me.Column21, Me.Column22, Me.Column23, Me.Column24, Me.Column25, Me.Column26, Me.Column27, Me.Column28, Me.Column29, Me.Column30, Me.Column31, Me.Column32, Me.Column33, Me.Column34, Me.Column35, Me.Column36, Me.Column37, Me.Column38, Me.Column39, Me.Column40, Me.Column41, Me.Column42, Me.Column43, Me.Column44, Me.Column45, Me.Column46, Me.Column47, Me.Column48, Me.Column49, Me.Column50, Me.Column51})
         Me.dgArticulos.EnableHeadersVisualStyles = False
         Me.dgArticulos.GridColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.dgArticulos.Location = New System.Drawing.Point(11, 239)
+        Me.dgArticulos.Location = New System.Drawing.Point(11, 179)
         Me.dgArticulos.Name = "dgArticulos"
         Me.dgArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgArticulos.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
-        Me.dgArticulos.RowsDefaultCellStyle = DataGridViewCellStyle6
-        Me.dgArticulos.Size = New System.Drawing.Size(1145, 396)
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgArticulos.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        Me.dgArticulos.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgArticulos.Size = New System.Drawing.Size(1145, 456)
         Me.dgArticulos.TabIndex = 8
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ID Artículo"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre de Artículo"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Modelo"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Exactitud"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Marca"
-        Me.Column5.Name = "Column5"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Departamento"
-        Me.Column6.Name = "Column6"
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Ubicación"
-        Me.Column7.Name = "Column7"
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "Intervalo de Calibración"
-        Me.Column9.Name = "Column9"
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "Ciclo de Calibración"
-        Me.Column10.Name = "Column10"
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "Fecha Vencimiento"
-        Me.Column11.Name = "Column11"
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "Notas"
-        Me.Column12.Name = "Column12"
-        '
-        'Column13
-        '
-        Me.Column13.HeaderText = "Activo"
-        Me.Column13.Items.AddRange(New Object() {"Y", "N"})
-        Me.Column13.Name = "Column13"
-        Me.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "Sitio"
-        Me.Column14.Name = "Column14"
-        '
-        'Column15
-        '
-        Me.Column15.HeaderText = "Puerto IEEE"
-        Me.Column15.Name = "Column15"
-        '
-        'Column16
-        '
-        Me.Column16.HeaderText = "Puerto del Cliente"
-        Me.Column16.Name = "Column16"
-        '
-        'Column17
-        '
-        Me.Column17.HeaderText = "Puerto RS232"
-        Me.Column17.Name = "Column17"
-        '
-        'Column18
-        '
-        Me.Column18.HeaderText = "Sub-Contrato"
-        Me.Column18.Name = "Column18"
-        '
-        'Column19
-        '
-        Me.Column19.HeaderText = "Automatico"
-        Me.Column19.Name = "Column19"
-        '
-        'Column20
-        '
-        Me.Column20.HeaderText = "Datos Incluidos"
-        Me.Column20.Name = "Column20"
-        '
-        'Column21
-        '
-        Me.Column21.HeaderText = "Categoria"
-        Me.Column21.Name = "Column21"
-        '
-        'Column22
-        '
-        Me.Column22.HeaderText = "Clase"
-        Me.Column22.Name = "Column22"
-        '
-        'Column23
-        '
-        Me.Column23.HeaderText = "Número de Equipo"
-        Me.Column23.Name = "Column23"
-        '
-        'Column24
-        '
-        Me.Column24.HeaderText = "Especificaciones Adicionales"
-        Me.Column24.Name = "Column24"
-        '
-        'Column25
-        '
-        Me.Column25.HeaderText = "Tiempo de Calibración"
-        Me.Column25.Name = "Column25"
-        '
-        'Column26
-        '
-        Me.Column26.HeaderText = "Peso Aproximado"
-        Me.Column26.Name = "Column26"
-        '
-        'Column27
-        '
-        Me.Column27.HeaderText = "Catálogo Generico"
-        Me.Column27.Name = "Column27"
-        '
-        'Column28
-        '
-        Me.Column28.HeaderText = "Metodo de Calibración"
-        Me.Column28.Name = "Column28"
-        '
-        'Column29
-        '
-        Me.Column29.HeaderText = "Normalización"
-        Me.Column29.Name = "Column29"
-        '
-        'Column30
-        '
-        Me.Column30.HeaderText = "Acreditación"
-        Me.Column30.Name = "Column30"
-        '
-        'Column31
-        '
-        Me.Column31.HeaderText = "Descripción de Servicio"
-        Me.Column31.Name = "Column31"
-        '
-        'Column32
-        '
-        Me.Column32.HeaderText = "Exactitud 1"
-        Me.Column32.Name = "Column32"
-        '
-        'Column33
-        '
-        Me.Column33.HeaderText = "Exactitud 2"
-        Me.Column33.Name = "Column33"
-        '
-        'Column34
-        '
-        Me.Column34.HeaderText = "Resultado 1"
-        Me.Column34.Name = "Column34"
-        '
-        'Column35
-        '
-        Me.Column35.HeaderText = "Resultado 2"
-        Me.Column35.Name = "Column35"
-        '
-        'Column36
-        '
-        Me.Column36.HeaderText = "Unidad 1"
-        Me.Column36.Name = "Column36"
-        '
-        'Column37
-        '
-        Me.Column37.HeaderText = "Unidad 2"
-        Me.Column37.Name = "Column37"
-        '
-        'Column38
-        '
-        Me.Column38.HeaderText = "Incertidumbre"
-        Me.Column38.Name = "Column38"
-        '
-        'Column39
-        '
-        Me.Column39.HeaderText = "Id de Servicio"
-        Me.Column39.Name = "Column39"
-        '
-        'Column40
-        '
-        Me.Column40.HeaderText = "Precio"
-        Me.Column40.Name = "Column40"
-        '
-        'Column41
-        '
-        Me.Column41.HeaderText = "Libre 1"
-        Me.Column41.Name = "Column41"
-        '
-        'Column42
-        '
-        Me.Column42.HeaderText = "Libre 2"
-        Me.Column42.Name = "Column42"
-        '
-        'Column43
-        '
-        Me.Column43.HeaderText = "Libre 3"
-        Me.Column43.Name = "Column43"
-        '
-        'Column44
-        '
-        Me.Column44.HeaderText = "Libre 4"
-        Me.Column44.Name = "Column44"
-        '
-        'Column45
-        '
-        Me.Column45.HeaderText = "Libre 5"
-        Me.Column45.Name = "Column45"
-        '
-        'Column46
-        '
-        Me.Column46.HeaderText = "Libre 6"
-        Me.Column46.Name = "Column46"
-        '
-        'Column47
-        '
-        Me.Column47.HeaderText = "Valor 1"
-        Me.Column47.Name = "Column47"
-        '
-        'Column48
-        '
-        Me.Column48.HeaderText = "Valor 2"
-        Me.Column48.Name = "Column48"
-        '
-        'Column49
-        '
-        Me.Column49.HeaderText = "Valor 3"
-        Me.Column49.Name = "Column49"
-        '
-        'Column50
-        '
-        Me.Column50.HeaderText = "Valor 4"
-        Me.Column50.Name = "Column50"
-        '
-        'Column51
-        '
-        Me.Column51.HeaderText = "Valor 5"
-        Me.Column51.Name = "Column51"
-        '
-        'Column52
-        '
-        Me.Column52.HeaderText = "Valor 6"
-        Me.Column52.Name = "Column52"
         '
         'Label1
         '
@@ -466,9 +211,9 @@ Partial Class FrmMantenimiento
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.TextMarca)
         Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.TextNumero)
-        Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.TextNombre)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.TextNum)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(3, 2)
@@ -508,12 +253,12 @@ Partial Class FrmMantenimiento
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Marca:"
         '
-        'TextNumero
+        'TextNombre
         '
-        Me.TextNumero.Location = New System.Drawing.Point(477, 14)
-        Me.TextNumero.Name = "TextNumero"
-        Me.TextNumero.Size = New System.Drawing.Size(100, 20)
-        Me.TextNumero.TabIndex = 15
+        Me.TextNombre.Location = New System.Drawing.Point(477, 14)
+        Me.TextNombre.Name = "TextNombre"
+        Me.TextNombre.Size = New System.Drawing.Size(100, 20)
+        Me.TextNombre.TabIndex = 15
         '
         'Label4
         '
@@ -522,14 +267,14 @@ Partial Class FrmMantenimiento
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(102, 13)
         Me.Label4.TabIndex = 14
-        Me.Label4.Text = "Número de Artículo:"
+        Me.Label4.Text = "Nombre de Artículo:"
         '
-        'TextNombre
+        'TextNum
         '
-        Me.TextNombre.Location = New System.Drawing.Point(263, 14)
-        Me.TextNombre.Name = "TextNombre"
-        Me.TextNombre.Size = New System.Drawing.Size(100, 20)
-        Me.TextNombre.TabIndex = 13
+        Me.TextNum.Location = New System.Drawing.Point(263, 14)
+        Me.TextNum.Name = "TextNum"
+        Me.TextNum.Size = New System.Drawing.Size(100, 20)
+        Me.TextNum.TabIndex = 13
         '
         'Label3
         '
@@ -544,19 +289,22 @@ Partial Class FrmMantenimiento
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Panel4)
-        Me.Panel3.Location = New System.Drawing.Point(15, 118)
+        Me.Panel3.Location = New System.Drawing.Point(419, 118)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(900, 52)
+        Me.Panel3.Size = New System.Drawing.Size(337, 52)
         Me.Panel3.TabIndex = 13
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel4.Controls.Add(Me.RadioButton1)
+        Me.Panel4.Controls.Add(Me.dgDatosG)
+        Me.Panel4.Controls.Add(Me.RbTodos)
         Me.Panel4.Controls.Add(Me.Label11)
         Me.Panel4.Location = New System.Drawing.Point(3, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(894, 48)
+        Me.Panel4.Size = New System.Drawing.Size(331, 48)
         Me.Panel4.TabIndex = 0
         '
         'Label11
@@ -569,6 +317,298 @@ Partial Class FrmMantenimiento
         Me.Label11.Size = New System.Drawing.Size(68, 19)
         Me.Label11.TabIndex = 11
         Me.Label11.Text = "Mostrar:"
+        '
+        'RbTodos
+        '
+        Me.RbTodos.AutoSize = True
+        Me.RbTodos.Checked = True
+        Me.RbTodos.Location = New System.Drawing.Point(77, 17)
+        Me.RbTodos.Name = "RbTodos"
+        Me.RbTodos.Size = New System.Drawing.Size(55, 17)
+        Me.RbTodos.TabIndex = 12
+        Me.RbTodos.TabStop = True
+        Me.RbTodos.Text = "Todos"
+        Me.RbTodos.UseVisualStyleBackColor = True
+        '
+        'dgDatosG
+        '
+        Me.dgDatosG.AutoSize = True
+        Me.dgDatosG.Location = New System.Drawing.Point(138, 17)
+        Me.dgDatosG.Name = "dgDatosG"
+        Me.dgDatosG.Size = New System.Drawing.Size(104, 17)
+        Me.dgDatosG.TabIndex = 13
+        Me.dgDatosG.TabStop = True
+        Me.dgDatosG.Text = "Datos Generales"
+        Me.dgDatosG.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(248, 17)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(69, 17)
+        Me.RadioButton1.TabIndex = 14
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Tecnicos"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID Artículo"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre de Artículo"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Modelo"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Exactitud"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Marca"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Departamento"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Ubicación"
+        Me.Column7.Name = "Column7"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Intervalo de Calibración"
+        Me.Column8.Name = "Column8"
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "Ciclo de Calibración"
+        Me.Column9.Name = "Column9"
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "Fecha Vencimiento"
+        Me.Column10.Name = "Column10"
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "Notas"
+        Me.Column11.Name = "Column11"
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "Activo"
+        Me.Column12.Items.AddRange(New Object() {"Y", "N"})
+        Me.Column12.Name = "Column12"
+        Me.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'Column13
+        '
+        Me.Column13.HeaderText = "Sitio"
+        Me.Column13.Name = "Column13"
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "Puerto IEEE"
+        Me.Column14.Name = "Column14"
+        '
+        'Column15
+        '
+        Me.Column15.HeaderText = "Puerto del Cliente"
+        Me.Column15.Name = "Column15"
+        '
+        'Column16
+        '
+        Me.Column16.HeaderText = "Puerto RS232"
+        Me.Column16.Name = "Column16"
+        '
+        'Column17
+        '
+        Me.Column17.HeaderText = "Sub-Contrato"
+        Me.Column17.Name = "Column17"
+        '
+        'Column18
+        '
+        Me.Column18.HeaderText = "Automatico"
+        Me.Column18.Name = "Column18"
+        '
+        'Column19
+        '
+        Me.Column19.HeaderText = "Datos Incluidos"
+        Me.Column19.Name = "Column19"
+        '
+        'Column20
+        '
+        Me.Column20.HeaderText = "Categoria"
+        Me.Column20.Name = "Column20"
+        '
+        'Column21
+        '
+        Me.Column21.HeaderText = "Clase"
+        Me.Column21.Name = "Column21"
+        '
+        'Column22
+        '
+        Me.Column22.HeaderText = "Número de Equipo"
+        Me.Column22.Name = "Column22"
+        '
+        'Column23
+        '
+        Me.Column23.HeaderText = "Especificaciones Adicionales"
+        Me.Column23.Name = "Column23"
+        '
+        'Column24
+        '
+        Me.Column24.HeaderText = "Tiempo de Calibración"
+        Me.Column24.Name = "Column24"
+        '
+        'Column25
+        '
+        Me.Column25.HeaderText = "Peso Aproximado"
+        Me.Column25.Name = "Column25"
+        '
+        'Column26
+        '
+        Me.Column26.HeaderText = "Catálogo Generico"
+        Me.Column26.Name = "Column26"
+        '
+        'Column27
+        '
+        Me.Column27.HeaderText = "Metodo de Calibración"
+        Me.Column27.Name = "Column27"
+        '
+        'Column28
+        '
+        Me.Column28.HeaderText = "Normalización"
+        Me.Column28.Name = "Column28"
+        '
+        'Column29
+        '
+        Me.Column29.HeaderText = "Acreditación"
+        Me.Column29.Name = "Column29"
+        '
+        'Column30
+        '
+        Me.Column30.HeaderText = "Descripción de Servicio"
+        Me.Column30.Name = "Column30"
+        '
+        'Column31
+        '
+        Me.Column31.HeaderText = "Exactitud 1"
+        Me.Column31.Name = "Column31"
+        '
+        'Column32
+        '
+        Me.Column32.HeaderText = "Exactitud 2"
+        Me.Column32.Name = "Column32"
+        '
+        'Column33
+        '
+        Me.Column33.HeaderText = "Resultado 1"
+        Me.Column33.Name = "Column33"
+        '
+        'Column34
+        '
+        Me.Column34.HeaderText = "Resultado 2"
+        Me.Column34.Name = "Column34"
+        '
+        'Column35
+        '
+        Me.Column35.HeaderText = "Unidad 1"
+        Me.Column35.Name = "Column35"
+        '
+        'Column36
+        '
+        Me.Column36.HeaderText = "Unidad 2"
+        Me.Column36.Name = "Column36"
+        '
+        'Column37
+        '
+        Me.Column37.HeaderText = "Incertidumbre"
+        Me.Column37.Name = "Column37"
+        '
+        'Column38
+        '
+        Me.Column38.HeaderText = "Id de Servicio"
+        Me.Column38.Name = "Column38"
+        '
+        'Column39
+        '
+        Me.Column39.HeaderText = "Precio"
+        Me.Column39.Name = "Column39"
+        '
+        'Column40
+        '
+        Me.Column40.HeaderText = "Libre 1"
+        Me.Column40.Name = "Column40"
+        '
+        'Column41
+        '
+        Me.Column41.HeaderText = "Libre 2"
+        Me.Column41.Name = "Column41"
+        '
+        'Column42
+        '
+        Me.Column42.HeaderText = "Libre 3"
+        Me.Column42.Name = "Column42"
+        '
+        'Column43
+        '
+        Me.Column43.HeaderText = "Libre 4"
+        Me.Column43.Name = "Column43"
+        '
+        'Column44
+        '
+        Me.Column44.HeaderText = "Libre 5"
+        Me.Column44.Name = "Column44"
+        '
+        'Column45
+        '
+        Me.Column45.HeaderText = "Libre 6"
+        Me.Column45.Name = "Column45"
+        '
+        'Column46
+        '
+        Me.Column46.HeaderText = "Valor 1"
+        Me.Column46.Name = "Column46"
+        '
+        'Column47
+        '
+        Me.Column47.HeaderText = "Valor 2"
+        Me.Column47.Name = "Column47"
+        '
+        'Column48
+        '
+        Me.Column48.HeaderText = "Valor 3"
+        Me.Column48.Name = "Column48"
+        '
+        'Column49
+        '
+        Me.Column49.HeaderText = "Valor 4"
+        Me.Column49.Name = "Column49"
+        '
+        'Column50
+        '
+        Me.Column50.HeaderText = "Valor 5"
+        Me.Column50.Name = "Column50"
+        '
+        'Column51
+        '
+        Me.Column51.HeaderText = "Valor 6"
+        Me.Column51.Name = "Column51"
         '
         'FrmMantenimiento
         '
@@ -603,17 +643,20 @@ Partial Class FrmMantenimiento
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextNombre As TextBox
+    Friend WithEvents TextNum As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents TextModelo As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextMarca As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextNumero As TextBox
+    Friend WithEvents TextNombre As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label11 As Label
+    Friend WithEvents RbTodos As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents dgDatosG As RadioButton
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -621,11 +664,12 @@ Partial Class FrmMantenimiento
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents Column13 As DataGridViewComboBoxColumn
+    Friend WithEvents Column12 As DataGridViewComboBoxColumn
+    Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
@@ -664,5 +708,4 @@ Partial Class FrmMantenimiento
     Friend WithEvents Column49 As DataGridViewTextBoxColumn
     Friend WithEvents Column50 As DataGridViewTextBoxColumn
     Friend WithEvents Column51 As DataGridViewTextBoxColumn
-    Friend WithEvents Column52 As DataGridViewTextBoxColumn
 End Class
