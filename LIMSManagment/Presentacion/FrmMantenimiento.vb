@@ -170,4 +170,65 @@ Public Class FrmMantenimiento
             Next
         Next
     End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Using conexion As New SqlConnection(cnt)
+            conexion.Open()
+            Dim r As String
+            Dim transaction As SqlTransaction
+            transaction = conexion.BeginTransaction("Sample")
+            Dim comando As SqlCommand = conexion.CreateCommand()
+            comando.Connection = conexion
+            comando.Transaction = transaction
+            For i = 0 To dgArticulos.Rows.Count - 2
+                r = "update [MetAs_Live].[dbo].[SetUpEquipment] set EquipmentName='" & (dgArticulos.Item(1, i).Value).Replace("'", "") & "',Model='" & (dgArticulos.Item(2, i).Value).Replace("'", "") & "',
+                Accuracy='" & (dgArticulos.Item(3, i).Value) & "', Mfr='" & (dgArticulos.Item(4, i).Value) & "',Dept='" & (dgArticulos.Item(5, i).Value) & "',
+                Location='" & (dgArticulos.Item(6, i).Value) & "',CALInterval=" & Val(dgArticulos.Item(7, i).Value) & ",CALCycle='" & (dgArticulos.Item(8, i).Value) & "',
+                CALDue='" & (dgArticulos.Item(9, i).Value) & "',ShortNotes='" & (dgArticulos.Item(10, i).Value) & "',IsActive='" & (dgArticulos.Item(11, i).Value) & "',
+                OnSite='" & (dgArticulos.Item(12, i).Value) & "',IEEEPort='" & (dgArticulos.Item(13, i).Value) & "',CustomerPort='" & (dgArticulos.Item(14, i).Value) & "',
+                RS232Port='" & (dgArticulos.Item(15, i).Value) & "',Subcontract='" & (dgArticulos.Item(16, i).Value) & "',Automated='" & (dgArticulos.Item(17, i).Value) & "',
+                DtaIncluded='" & (dgArticulos.Item(18, i).Value).Replace("≠", "") & "',Catagory='" & (dgArticulos.Item(19, i).Value) & "',Class='" & (dgArticulos.Item(20, i).Value) & "',ModifiedOn=getdate(),
+                ItemNumber='" & (dgArticulos.Item(21, i).Value).Replace("'", "") & "',AdditionalSepcification='" & (dgArticulos.Item(22, i).Value) & "',
+                TurnAroundTime='" & (dgArticulos.Item(23, i).Value) & "',ApproxWeight='" & (dgArticulos.Item(24, i).Value) & "',RelationItemNo='" & (dgArticulos.Item(25, i).Value) & "',
+                CalibrationMethod='" & (dgArticulos.Item(26, i).Value) & "',Standardization='" & (dgArticulos.Item(27, i).Value) & "',Accreditation='" & (dgArticulos.Item(28, i).Value) & "',
+                ServiceDescription='" & (dgArticulos.Item(29, i).Value).Replace("≠", "") & "',Scale1Accuracy='" & (dgArticulos.Item(30, i).Value) & "',Scale2Accuracy='" & (dgArticulos.Item(31, i).Value) & "',
+                Scale1Resolution='" & (dgArticulos.Item(32, i).Value) & "',Scale2Resolution='" & (dgArticulos.Item(33, i).Value) & "',Scale1Unit='" & (dgArticulos.Item(34, i).Value) & "',
+                Scale2Unit='" & (dgArticulos.Item(35, i).Value) & "',Uncertainity='" & (dgArticulos.Item(36, i).Value) & "' where EquipId=" & Val(dgArticulos.Item(0, i).Value)
+                'MsgBox(r)
+                comando.CommandText = r
+                comando.ExecuteNonQuery()
+
+                r = "update [MetAs_Live].[dbo].[SetupEquipmentServiceMapping] set Price=" & CDbl(dgArticulos.Item(38, i).Value) & " where EquipId=" & Val(dgArticulos.Item(0, i).Value)
+                comando.CommandText = r
+                comando.ExecuteNonQuery()
+
+                r = "update [MetAs_Live].[dbo].[EquipmentVariable] set Field1='" & (dgArticulos.Item(39, i).Value) & "',Field2='" & (dgArticulos.Item(40, i).Value) & "',
+                    Field3='" & (dgArticulos.Item(41, i).Value) & "',Field4='" & (dgArticulos.Item(42, i).Value) & "',Field5='" & (dgArticulos.Item(43, i).Value) & "',
+                    Field6='" & (dgArticulos.Item(44, i).Value) & "',Value1='" & (dgArticulos.Item(45, i).Value) & "',Value2='" & (dgArticulos.Item(46, i).Value) & "',
+                    Value3='" & (dgArticulos.Item(47, i).Value) & "',Value4='" & (dgArticulos.Item(48, i).Value) & "',Value5='" & (dgArticulos.Item(49, i).Value) & "',
+                    Value6='" & (dgArticulos.Item(50, i).Value) & "' where EquipID_FK=" & Val(dgArticulos.Item(0, i).Value)
+                comando.CommandText = r
+                comando.ExecuteNonQuery()
+                'MsgBox(r)
+            Next
+
+            Try
+                If MessageBox.Show("¿Desea Guardar la información?", "Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = Windows.Forms.DialogResult.Yes Then
+                    transaction.Commit()
+                    MsgBox("El Catálogo se guardó correctamente", MsgBoxStyle.Information, "Guardado Exitoso")
+                Else
+                    transaction.Rollback()
+                    Me.Dispose()
+                End If
+            Catch ex As Exception
+                    MsgBox("Commit Exception type: {0} no se pudo insertar por error", MsgBoxStyle.Critical, "Error externo al Sistema")
+                    Try
+                        transaction.Rollback()
+                    Catch ex1 As Exception
+                        MsgBox("Error RollBack", MsgBoxStyle.Critical, "Error interno del Sistema")
+                    End Try
+                End Try
+            conexion.Close()
+        End Using
+    End Sub
 End Class

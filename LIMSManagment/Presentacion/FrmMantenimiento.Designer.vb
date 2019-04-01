@@ -115,7 +115,7 @@ Partial Class FrmMantenimiento
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(86, 37)
         Me.btnGuardar.TabIndex = 10
-        Me.btnGuardar.Text = "Importar"
+        Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
         'dgArticulos
