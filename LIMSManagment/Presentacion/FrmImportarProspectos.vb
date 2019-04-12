@@ -33,7 +33,7 @@ Public Class FrmImportarProspectos
                     , ObservAdminpaq , Giro , MetodoPagoCte ) VALUES (getdate(),'" & dgArticulos.Item(0, i).Value & "',
                 '" & (dgArticulos.Item(1, i).Value).Replace("'", "") & "','" & (dgArticulos.Item(2, i).Value).Replace("'", "") & "','" & dgArticulos.Item(3, i).Value & "'
                 ,'" & (dgArticulos.Item(4, i).Value) & "','" & dgArticulos.Item(5, i).Value & "','" & dgArticulos.Item(6, i).Value & "'
-                ,'" & dgArticulos.Item(7, i).Value & "'," & Val(dgArticulos.Item(8, i).Value) & ",'" & dgArticulos.Item(9, i).Value & "'
+                ,'" & dgArticulos.Item(7, i).Value & "','" & dgArticulos.Item(8, i).Value & "','" & dgArticulos.Item(9, i).Value & "'
                 ,'" & (dgArticulos.Item(10, i).Value) & "','" & (dgArticulos.Item(11, i).Value) & "'
                 ,'" & (dgArticulos.Item(12, i).Value) & "','Prospecto','" & (dgArticulos.Item(13, i).Value) & "'
                 ," & (dgArticulos.Item(14, i).Value).Replace("NULL", 0) & ",'" & (dgArticulos.Item(15, i).Value) & "','" & (dgArticulos.Item(16, i).Value) & "'
