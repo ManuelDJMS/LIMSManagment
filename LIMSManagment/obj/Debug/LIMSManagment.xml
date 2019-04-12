@@ -32,6 +32,16 @@ LIMSManagment
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:LIMSManagment.My.Resources.Resources.icons8_close_window_16">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LIMSManagment.My.Resources.Resources.icons8_close_window_40">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LIMSManagment.My.Resources.Resources.icons8_close_window_50">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -58,6 +68,11 @@ LIMSManagment
 </summary>
 </member>
 <member name="P:LIMSManagment.My.Resources.Resources.icons8_restore_window_50">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LIMSManagment.My.Resources.Resources.icons8_video_conference_48">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

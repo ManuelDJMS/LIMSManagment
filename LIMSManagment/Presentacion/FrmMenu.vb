@@ -146,11 +146,29 @@ Public Class FormPrincipal
         PanelMenuArt.Visible = False
     End Sub
 
+    Private Sub btProspectos_Click(sender As Object, e As EventArgs) Handles btProspectos.Click
+        If (PanelProsp.Visible = True) Then
+            PanelProsp.Visible = False
+            btProspectos.Visible = True
+        Else
+            PanelProsp.Visible = True
+            'btProspectos.Visible = False
+        End If
+    End Sub
+
+    Private Sub btImportarPros_Click(sender As Object, e As EventArgs) Handles btImportarPros.Click
+        AbrirFormEnPanel(Of FrmImportarProspectos)()
+        btProspectos.BackColor = Color.FromArgb(12, 61, 92)
+        PanelProsp.Visible = False
+    End Sub
+
     Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
         If (PanelMenuArt.Visible = True) Then
             PanelMenuArt.Visible = False
+            btProspectos.Visible = True
         Else
             PanelMenuArt.Visible = True
+            btProspectos.Visible = False
         End If
     End Sub
 

@@ -75,6 +75,12 @@
   <ItemGroup>
     <Compile Include="Conexiones\Importar.vb" />
     <Compile Include="Conexiones\Metas2019.vb" />
+    <Compile Include="Presentacion\FrmImportarProspectos.Designer.vb">
+      <DependentUpon>FrmImportarProspectos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmImportarProspectos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\FrmMantenimiento.Designer.vb">
       <DependentUpon>FrmMantenimiento.vb</DependentUpon>
     </Compile>
@@ -111,6 +117,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Presentacion\FrmImportarProspectos.resx">
+      <DependentUpon>FrmImportarProspectos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmMantenimiento.resx">
       <DependentUpon>FrmMantenimiento.vb</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +174,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-biomass-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-video-conference-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-40.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

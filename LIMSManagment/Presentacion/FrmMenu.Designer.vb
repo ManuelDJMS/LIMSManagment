@@ -31,6 +31,7 @@ Partial Class FormPrincipal
         Me.PanelMenuArt = New System.Windows.Forms.Panel()
         Me.PanelBarraTitulo = New System.Windows.Forms.Panel()
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
+        Me.btProspectos = New System.Windows.Forms.Button()
         Me.btnArticulos = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btMantenimiento = New System.Windows.Forms.Button()
@@ -39,6 +40,8 @@ Partial Class FormPrincipal
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
+        Me.PanelProsp = New System.Windows.Forms.Panel()
+        Me.btImportarPros = New System.Windows.Forms.Button()
         Me.PanelContenedor.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
         Me.PanelMenuArt.SuspendLayout()
@@ -48,6 +51,7 @@ Partial Class FormPrincipal
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelProsp.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelContenedor
@@ -76,6 +80,8 @@ Partial Class FormPrincipal
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.PanelMenu.Controls.Add(Me.PanelProsp)
+        Me.PanelMenu.Controls.Add(Me.btProspectos)
         Me.PanelMenu.Controls.Add(Me.btnArticulos)
         Me.PanelMenu.Controls.Add(Me.Label1)
         Me.PanelMenu.Controls.Add(Me.PictureBox1)
@@ -122,6 +128,27 @@ Partial Class FormPrincipal
         Me.PanelBarraTitulo.Name = "PanelBarraTitulo"
         Me.PanelBarraTitulo.Size = New System.Drawing.Size(1021, 32)
         Me.PanelBarraTitulo.TabIndex = 0
+        '
+        'btProspectos
+        '
+        Me.btProspectos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btProspectos.FlatAppearance.BorderSize = 0
+        Me.btProspectos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.btProspectos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.btProspectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btProspectos.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btProspectos.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btProspectos.Image = Global.LIMSManagment.My.Resources.Resources.icons8_video_conference_48
+        Me.btProspectos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btProspectos.Location = New System.Drawing.Point(0, 191)
+        Me.btProspectos.Margin = New System.Windows.Forms.Padding(2)
+        Me.btProspectos.Name = "btProspectos"
+        Me.btProspectos.Size = New System.Drawing.Size(200, 55)
+        Me.btProspectos.TabIndex = 4
+        Me.btProspectos.Text = "PROSPECTOS"
+        Me.btProspectos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btProspectos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btProspectos.UseVisualStyleBackColor = True
         '
         'btnArticulos
         '
@@ -249,6 +276,37 @@ Partial Class FormPrincipal
         Me.btnCerrar.TabIndex = 4
         Me.btnCerrar.TabStop = False
         '
+        'PanelProsp
+        '
+        Me.PanelProsp.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.PanelProsp.Controls.Add(Me.btImportarPros)
+        Me.PanelProsp.Location = New System.Drawing.Point(31, 247)
+        Me.PanelProsp.Name = "PanelProsp"
+        Me.PanelProsp.Size = New System.Drawing.Size(167, 53)
+        Me.PanelProsp.TabIndex = 5
+        Me.PanelProsp.Visible = False
+        '
+        'btImportarPros
+        '
+        Me.btImportarPros.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btImportarPros.FlatAppearance.BorderSize = 0
+        Me.btImportarPros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btImportarPros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btImportarPros.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btImportarPros.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btImportarPros.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btImportarPros.Image = Global.LIMSManagment.My.Resources.Resources.icons8_microsoft_excel_30
+        Me.btImportarPros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btImportarPros.Location = New System.Drawing.Point(2, 2)
+        Me.btImportarPros.Margin = New System.Windows.Forms.Padding(2)
+        Me.btImportarPros.Name = "btImportarPros"
+        Me.btImportarPros.Size = New System.Drawing.Size(166, 49)
+        Me.btImportarPros.TabIndex = 3
+        Me.btImportarPros.Text = "Importar"
+        Me.btImportarPros.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btImportarPros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btImportarPros.UseVisualStyleBackColor = True
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -271,6 +329,7 @@ Partial Class FormPrincipal
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelProsp.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -290,4 +349,7 @@ Partial Class FormPrincipal
     Friend WithEvents Tiempo As Timer
     Friend WithEvents btnImportarMenu As Button
     Friend WithEvents btMantenimiento As Button
+    Friend WithEvents btProspectos As Button
+    Friend WithEvents PanelProsp As Panel
+    Friend WithEvents btImportarPros As Button
 End Class

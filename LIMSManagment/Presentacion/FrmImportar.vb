@@ -114,6 +114,10 @@ Public Class FrmImportar
         End Using
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Dispose()
+    End Sub
+
     Private Sub btnImportar_Click(sender As Object, e As EventArgs) Handles btnImportar.Click
         MsgBox("Para guardar correctamente los datos de los Artículos es necesario insertar las 3 hojas del archivo de Excel ", MsgBoxStyle.Information)
         libro()

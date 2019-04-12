@@ -25,3 +25,4 @@ C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMS
 C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMSManagment.xml
 C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMSManagment.pdb
 C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMSManagment.FrmMantenimiento.resources
+C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMSManagment.FrmImportarProspectos.resources
