@@ -176,13 +176,13 @@
     <None Include="Resources\icons8-biomass-48 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-video-conference-48.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-close-window-16.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-close-window-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-video-conference-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
