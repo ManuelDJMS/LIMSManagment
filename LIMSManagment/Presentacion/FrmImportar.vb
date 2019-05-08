@@ -4,6 +4,7 @@ Public Class FrmImportar
     Public hojas As Integer
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         hojas = 0
+
         Using conexion As New SqlConnection(cnt)
             conexion.Open()
             Dim r As String
@@ -13,13 +14,14 @@ Public Class FrmImportar
             comando.Connection = conexion
             comando.Transaction = transaction
             For i = 0 To dgArticulos.Rows.Count - 2
-                r = "insert into [MetAs_Live].[dbo].[SetUpEquipment](InstrumentId,EquipmentName,Model,Accuracy,Mfr,SrlNo,Dept,Location,CALInterval,CALCycle,
+                r = "if exists(select ItemNumber from [SetUpEquipment] where ItemNumber='" & (dgArticulos.Item(28, i).Value).Replace("'", "") & "') begin update [SetUpEquipment] set Folio=" & Val(dgArticulos.Item(46, i).Value) & " where ItemNumber='" & (dgArticulos.Item(28, i).Value).Replace("'", "") & "'; 
+                end else begin insert into [SetUpEquipment](InstrumentId,EquipmentName,Model,Accuracy,Mfr,SrlNo,Dept,Location,CALInterval,CALCycle,
                 CALDue,ShortNotes,IsActive,OnSite,IEEEPort,CustomerPort,RS232Port,Subcontract,Automated,DtaIncluded,
                 PriceCode,Catagory,Class,CreatedBy,CreatedOn,
                 ModifiedBy,ModifiedOn,ItemNumber,AdditionalSepcification,TurnAroundTime,
                 ApproxWeight,RelationItemNo,CalibrationMethod,Standardization,Accreditation,
                 ServiceDescription,AttachmentName,Attachment,Scale1Accuracy,Scale2Accuracy,
-                Scale1Resolution,Scale2Resolution,Scale1Unit,Scale2Unit,Uncertainity)VALUES ('" & dgArticulos.Item(1, i).Value & "',
+                Scale1Resolution,Scale2Resolution,Scale1Unit,Scale2Unit,Uncertainity, Folio)VALUES ('" & dgArticulos.Item(1, i).Value & "',
                 '" & (dgArticulos.Item(2, i).Value).Replace("'", "") & "','" & (dgArticulos.Item(3, i).Value).Replace("'", "") & "','" & dgArticulos.Item(4, i).Value & "'
                 ,'" & (dgArticulos.Item(5, i).Value) & "','" & dgArticulos.Item(6, i).Value & "','" & dgArticulos.Item(7, i).Value & "'
                 ,'" & dgArticulos.Item(8, i).Value & "'," & Val(dgArticulos.Item(9, i).Value) & ",'" & dgArticulos.Item(10, i).Value & "'
@@ -31,10 +33,11 @@ Public Class FrmImportar
                 ,'" & (dgArticulos.Item(23, i).Value) & "','" & (dgArticulos.Item(24, i).Value) & "',getdate(),'" & (dgArticulos.Item(26, i).Value) & "',getdate(),'" & (dgArticulos.Item(28, i).Value).Replace("'", "") & "'
                 ,'" & dgArticulos.Item(29, i).Value & "','" & (dgArticulos.Item(30, i).Value) & "','" & dgArticulos.Item(31, i).Value & "'
                 ,'" & (dgArticulos.Item(32, i).Value) & "','" & (dgArticulos.Item(33, i).Value) & "','" & dgArticulos.Item(34, i).Value & "'
-                ,'" & (dgArticulos.Item(35, i).Value) & "','" & (dgArticulos.Item(36, i).Value).Replace("≠", "") & "','" & (dgArticulos.Item(37, i).Value) & "'
+                ,'" & (dgArticulos.Item(35, i).Value) & "','" & (dgArticulos.Item(36, i).Value) & "','" & (dgArticulos.Item(37, i).Value) & "'
                 ,CONVERT(VARBINARY(25), '0x9473FBCCBC01AF',1),'" & (dgArticulos.Item(39, i).Value) & "','" & (dgArticulos.Item(40, i).Value) & "'
                 ,'" & (dgArticulos.Item(41, i).Value) & "','" & (dgArticulos.Item(42, i).Value) & "','" & (dgArticulos.Item(43, i).Value) & "'
-                ,'" & (dgArticulos.Item(44, i).Value) & "','" & (dgArticulos.Item(45, i).Value) & "')"
+                ,'" & (dgArticulos.Item(44, i).Value) & "','" & (dgArticulos.Item(44, i).Value) & "'," & (dgArticulos.Item(46, i).Value) & "); end"
+                'MsgBox(r)
                 comando.CommandText = r
                 comando.ExecuteNonQuery()
             Next
@@ -54,7 +57,7 @@ Public Class FrmImportar
             lector2019.Close()
             For i = 0 To dgArticulos.Rows.Count - 2
                 maximo = maximo + 1
-                r = "insert into [MetAs_Live].[dbo].[EquipmentVariable](EquipID_FK,Field1,Field2,Field3,Field4,Field5,Field6,Value1,Value2,Value3,Value4,Value5,Value6)
+                r = "insert into [EquipmentVariable](EquipID_FK,Field1,Field2,Field3,Field4,Field5,Field6,Value1,Value2,Value3,Value4,Value5,Value6)
                          VALUES (" & maximo & "," & Val(dgArticulos.Item(1, i).Value) & "," & Val(dgArticulos.Item(2, i).Value) & "
                          ," & Val(dgArticulos.Item(3, i).Value) & "," & Val(dgArticulos.Item(4, i).Value) & "," & Val(dgArticulos.Item(5, i).Value) & "," & Val(dgArticulos.Item(6, i).Value) & "
                          ,'" & dgArticulos.Item(7, i).Value & "','" & dgArticulos.Item(8, i).Value & "','" & dgArticulos.Item(9, i).Value & "'
@@ -69,7 +72,7 @@ Public Class FrmImportar
             If a = False Then
                 For i = 0 To dgArticulos.Rows.Count - 2
                     maximo2 = maximo2 + 1
-                    r = "insert into [MetAs_Live].[dbo].[SetupEquipmentServiceMapping] (EquipId,ServicesId,Price,CreatedOn)
+                    r = "insert into [SetupEquipmentServiceMapping] (EquipId,ServicesId,Price,CreatedOn)
                 VALUES (" & maximo2 & "," & Val(dgArticulos.Item(2, i).Value) & "
                          ," & CDbl(dgArticulos.Item(3, i).Value) & ", getdate())"
                     comando.CommandText = r
