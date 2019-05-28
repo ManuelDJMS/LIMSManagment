@@ -236,4 +236,8 @@ Public Class FrmMantenimiento
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error del Sistema")
         End Try
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Dispose()
+    End Sub
 End Class

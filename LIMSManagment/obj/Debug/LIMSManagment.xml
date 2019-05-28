@@ -82,6 +82,11 @@ LIMSManagment
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:LIMSManagment.My.Resources.Resources.metas_esta1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LIMSManagment.My.Resources.Resources.metass">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
