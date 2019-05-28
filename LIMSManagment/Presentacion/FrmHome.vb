@@ -1,5 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
-Public Class FrmMenu123
+Public Class FrmHome
     Private iscollapsed As Boolean = True
 #Region "FUNCIONALIDADES DEL FORMULARIO"
     'RESIZE DEL FORMULARIO- CAMBIAR TAMAÑO
