@@ -26,3 +26,9 @@ C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMS
 C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMSManagment.pdb
 C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMSManagment.FrmMantenimiento.resources
 C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMSManagment.FrmImportarProspectos.resources
+C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMSManagment.FrmNuevos.resources
+C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\bin\Debug\MetroFramework.Design.dll
+C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\bin\Debug\MetroFramework.dll
+C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\obj\Debug\LIMSManagment.vbproj.CopyComplete
+C:\Users\Software TI\Documents\GitHub\LIMSManagment\LIMSManagment\bin\Debug\Bunifu_UI_v1.52.dll

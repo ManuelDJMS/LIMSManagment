@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
+Imports System.Threading
 Public Class FormPrincipal
     Dim banm, banb As Boolean
 #Region "FUNCIONALIDADES DEL FORMULARIO"
@@ -59,23 +60,11 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub btnCerrar_MouseLeave(sender As Object, e As EventArgs) Handles btnCerrar.MouseLeave
-        btnCerrar.BackColor = Color.FromArgb(13, 93, 142)
+        btnCerrar.BackColor = Color.FromArgb(4, 41, 68)
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Application.Exit()
-    End Sub
-
-    Private Sub btnRestaurar_MouseHover(sender As Object, e As EventArgs) Handles btnRestaurar.MouseHover
-        btnRestaurar.BackColor = Color.Gray
-    End Sub
-
-    Private Sub btnRestaurar_MouseLeave(sender As Object, e As EventArgs) Handles btnRestaurar.MouseLeave
-        btnRestaurar.BackColor = Color.FromArgb(13, 93, 142)
-    End Sub
-
-    Private Sub btnMinimizar_MouseHover(sender As Object, e As EventArgs) Handles btnMinimizar.MouseHover
-        btnMinimizar.BackColor = Color.Gray
     End Sub
 #End Region
 
@@ -99,14 +88,6 @@ Public Class FormPrincipal
         Else
             Formulario.BringToFront()
         End If
-    End Sub
-
-    Private Sub btnMaximizar_MouseHover(sender As Object, e As EventArgs) Handles btnMaximizar.MouseHover
-        btnMaximizar.BackColor = Color.Gray
-    End Sub
-
-    Private Sub btnMaximizar_MouseLeave(sender As Object, e As EventArgs) Handles btnMaximizar.MouseLeave
-        btnMaximizar.BackColor = Color.FromArgb(13, 93, 142)
     End Sub
 
     Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
@@ -161,7 +142,6 @@ Public Class FormPrincipal
         btProspectos.BackColor = Color.FromArgb(12, 61, 92)
         PanelProsp.Visible = False
     End Sub
-
     Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
         If (PanelMenuArt.Visible = True) Then
             PanelMenuArt.Visible = False
@@ -180,9 +160,5 @@ Public Class FormPrincipal
         If (Application.OpenForms("FormAgenda") Is Nothing) Then
             ' Button2.BackColor = Color.FromArgb(4, 41, 68)
         End If
-    End Sub
-
-    Private Sub btnMinimizar_MouseLeave(sender As Object, e As EventArgs) Handles btnMinimizar.MouseLeave
-        btnMinimizar.BackColor = Color.FromArgb(13, 93, 142)
     End Sub
 End Class

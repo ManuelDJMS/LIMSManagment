@@ -31,7 +31,6 @@ Partial Class FormPrincipal
         Me.btImportarPros = New System.Windows.Forms.Button()
         Me.btProspectos = New System.Windows.Forms.Button()
         Me.btnArticulos = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelMenuArt = New System.Windows.Forms.Panel()
         Me.btMantenimiento = New System.Windows.Forms.Button()
         Me.btnImportarMenu = New System.Windows.Forms.Button()
@@ -40,17 +39,18 @@ Partial Class FormPrincipal
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
         Me.PanelContenedor.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
         Me.PanelProsp.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenuArt.SuspendLayout()
         Me.PanelBarraTitulo.SuspendLayout()
         CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelContenedor
@@ -83,6 +83,7 @@ Partial Class FormPrincipal
         Me.PanelMenu.Controls.Add(Me.btProspectos)
         Me.PanelMenu.Controls.Add(Me.btnArticulos)
         Me.PanelMenu.Controls.Add(Me.PanelMenuArt)
+        Me.PanelMenu.Controls.Add(Me.PictureBox1)
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenu.Location = New System.Drawing.Point(0, 32)
         Me.PanelMenu.Margin = New System.Windows.Forms.Padding(2)
@@ -163,16 +164,6 @@ Partial Class FormPrincipal
         Me.btnArticulos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnArticulos.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.LIMSManagment.My.Resources.Resources.metass
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(27, 23)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'PanelMenuArt
         '
         Me.PanelMenuArt.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(130, Byte), Integer))
@@ -233,7 +224,6 @@ Partial Class FormPrincipal
         Me.PanelBarraTitulo.Controls.Add(Me.btnMinimizar)
         Me.PanelBarraTitulo.Controls.Add(Me.btnMaximizar)
         Me.PanelBarraTitulo.Controls.Add(Me.btnCerrar)
-        Me.PanelBarraTitulo.Controls.Add(Me.PictureBox1)
         Me.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelBarraTitulo.Location = New System.Drawing.Point(0, 0)
         Me.PanelBarraTitulo.Margin = New System.Windows.Forms.Padding(2)
@@ -294,6 +284,16 @@ Partial Class FormPrincipal
         Me.btnCerrar.TabIndex = 4
         Me.btnCerrar.TabStop = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.LIMSManagment.My.Resources.Resources.metass
+        Me.PictureBox1.Location = New System.Drawing.Point(47, 15)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(111, 108)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -309,13 +309,13 @@ Partial Class FormPrincipal
         Me.PanelContenedor.ResumeLayout(False)
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelProsp.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenuArt.ResumeLayout(False)
         Me.PanelBarraTitulo.ResumeLayout(False)
         CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
